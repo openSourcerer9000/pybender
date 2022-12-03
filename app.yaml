@@ -1,5 +1,7 @@
 runtime: python39
-# -w 4: 4 workers? main:app is app in namespace of main.py
+# -w 4: 4 workers?
+# -k worker klass?
+# main:app is app in namespace of main.py
 entrypoint: gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app
 # instance_class: F2
 
