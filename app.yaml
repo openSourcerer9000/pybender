@@ -1,0 +1,18 @@
+runtime: python309
+
+# instance_class: F2
+
+# env_variables:
+#   BUCKET_NAME: "example-gcs-bucket"
+
+handlers:
+# Matches requests to /images/... to files in static/images/...
+# - url: /images
+#   static_dir: static/images
+
+# make sure that all requests to my app on http get redirected to 
+# https without having to specify secure: always for every url endpoint in my app.
+- url: /.*
+  secure: always
+  # redirect_http_response_code: 301
+  script: auto
